@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 辣椒の酱
+title: Walter
 subtitle: 尚未执佩剑，转眼即江湖
-description: 生活坏到一定程度就会好起来，因为它无法更坏
-keywords: java,elasticsearch,设计模式,sql
-author: 辣椒の酱
+description: 技术,资源分享
+keywords: 技术,资源分享
+author: Walter
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://removeif.github.io
+url: https://longer008.github.io
 #root: /remove.io/
 root: /
 # 可选 permalink: abbrlink 短链接模式

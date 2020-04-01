@@ -16,21 +16,19 @@ comments: false
 但行好事莫问前程，永远年轻，永远热内盈眶，永远保持**正能量**。
 💪💪💪💪💪💪冲鸭！！！！
 
-->>>>>>>>>>>>>>>>>>>>
-个人信息：
-计算机科学与技术专业
-从事JAVA后端开发
-码畜一枚
-坚信代码改变世界
 
-<br>
+#### 个人信息：
+---
+统计学专业
+码界小白一枚
+坚信代码改变世界🤪
+
 
 #### 博客信息
 
 ---
-+ 网站采用的[Icarus主题](http://github.com/ppoffice/hexo-theme-icarus) 
++ 网站采用的[Icarus主题的升级版](https://github.com/removeif/hexo-theme-amazing) 
 + 追求尽可能的简洁，清晰，易用。
-+ 在Icarus主题之上进行了部分修改。
 
 ***更新日志：***
 --*2020.01.18：icarus3.0适配*
@@ -46,7 +44,6 @@ comments: false
 --*2019.09.14：增加[精简next主题](https://removeif.github.io/remove.io/)*
 --*2019.09.14：利用中秋节放假，重做了首页的热门推荐、加个widget最新评论框、归档页加入文章贡献概览面板*
 
-<br>
 
 #### 本站推荐索引
 
@@ -111,5 +108,4 @@ comments: false
 	<ul class="time-axis"></ul>
 </div>
 <script src="/js/about-me.js"></script>
-<br>
 <br>

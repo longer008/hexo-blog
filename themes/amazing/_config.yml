@@ -13,25 +13,25 @@ head:
     open_graph:
         # Page title (og:title) (optional)
         # You should leave this blank for most of the time
-        title: 辣椒の酱
+        title: Walter
         # Page type (og:type) (optional)
         # You should leave this blank for most of the time
         type: blog
         # Page URL (og:url) (optional)
         # You should leave this blank for most of the time
-        url: https://removeif.github.io/
+        url: https://longer008.github.io/
         # Page cover (og:image) (optional) Default to the Open Graph image or thumbnail of the page
         # You should leave this blank for most of the time
         image: https://cdn.jsdelivr.net/gh/removeif/removeif.github.io@latest/img/avatar.jpg
         # Site name (og:site_name) (optional)
         # You should leave this blank for most of the time
-        site_name: 辣椒の酱
+        site_name: Walter`s Blog
         # Page author (article:author) (optional)
         # You should leave this blank for most of the time
-        author: removeif
+        author: walter
         # Page description (og:description) (optional)
         # You should leave this blank for most of the time
-        description: java,技术分享,后端开发,支付框架,数据接口,算法,leetcode
+        description: 日常技术,资源分享
         # Twitter card type (twitter:card)
         twitter_card:
         # Twitter ID (twitter:creator)
@@ -49,16 +49,16 @@ head:
     structured_data:
         # Page title (optional)
         # You should leave this blank for most of the time
-        title: 辣椒の酱
+        title: Walter
         # Page description (optional)
         # You should leave this blank for most of the time
-        description: java,技术分享,后端开发,支付框架,数据接口,算法,leetcode
+        description: 日常技术,资源分享
         # Page URL (optional)
         # You should leave this blank for most of the time
-        url: https://removeif.github.io/
+        url: https://longer008.github.io/
         # Page author (article:author) (optional)
         # You should leave this blank for most of the time
-        author: removeif
+        author: walter
         # Page images (optional) Default to the Open Graph image or thumbnail of the page
         # You should leave this blank for most of the time
         image: https://cdn.jsdelivr.net/gh/removeif/removeif.github.io@latest/img/avatar.jpg
@@ -77,7 +77,7 @@ navbar:
         归档: /archives
         分类: /categories
         标签: /tags
-        律法: /tags/法律/
+        # 律法: /tags/法律/
         影音: /media
         相册: /album
         友链: /friend
@@ -88,7 +88,7 @@ navbar:
     links:
         Download on GitHub:
             icon: fab fa-github
-            url: 'https://github.com/removeif'
+            url: 'https://github.com/longer008'
 # Page footer configurations
 footer:
     # Links to be shown on the right of the footer section
@@ -182,7 +182,7 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: 辣椒の酱
+        author: walter
         # Title of the author to be shown in the profile widget
         author_title: 尚未执佩剑，转眼即江湖
         # Author's current location to be shown in the profile widget
@@ -321,11 +321,11 @@ comment:
     type: gitalk
     # Disqus shortname
 #    shortname: ''
-    owner: removeif         # (required) GitHub user name
-    repo: blog_comment          # (required) GitHub repository name
-    client_id: 46a9f3481b46ea0129d8     # (required) OAuth application client id
-    client_secret: 79c7c9cb847e141757d7864453bcbf89f0655b24 # (required) OAuth application client secret
-    admin: ['removeif']
+    owner: longer008         # (required) GitHub user name
+    repo: hexo-blog          # (required) GitHub repository name
+    client_id: e89664e367cd250daa70     # (required) OAuth application client id
+    client_secret: 5301cd226ff11c2b7f2ab94de72fc93ee5b7ffba # (required) OAuth application client secret
+    admin: ['longer008']
     create_issue_manually: true
     distraction_free_mode: false
     has_hot_recommend: true # 是否有热门推荐
