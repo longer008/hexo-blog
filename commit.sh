@@ -15,6 +15,7 @@ git push  origin master
 
 echo -e "\ngit commit successful!"
 
+# deploy
 hexo clean
 hexo deploy
 
@@ -23,6 +24,8 @@ cd  ../longer008.github.io/
 git add --all 
 git commit  -m 'update'
 git push  origin master
+
+echo -e "\ndeploy successful!"
 
 exit 0
 
