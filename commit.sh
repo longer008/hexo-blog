@@ -4,6 +4,13 @@ git push origin dev
 
 git subtree split -P public -b master
 
+cd public
+
+git init 
+git remote add deploy https://github.com/longer008/longer008.github.io.git 
+git push deploy master -f
+
+
 echo -e "\ngit commit successful!"
 exit 0
 
