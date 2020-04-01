@@ -1,11 +1,12 @@
 # Version of the configuration file
 version: 3.0.0
 # Path or URL to the website's logo
-logo: https://cdn.jsdelivr.net/gh/removeif/blog_image/img/2019/20191121122803.png #https://cdn.jsdelivr.net/gh/removeif/blog_image/img/2019/20191121115040.png
+# https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0/img/avatar.jpg
+logo: https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0/img/avatar.jpg #https://cdn.jsdelivr.net/gh/removeif/blog_image/img/2019/20191121115040.png
 # Page metadata configurations
 head:
     # URL or path to the website's icon
-    favicon: https://cdn.jsdelivr.net/gh/removeif/removeif.github.io@latest/img/wico.png
+    favicon: https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0/img/avatar.jpg
     # Canonical URL of the current page
     canonical_url:
     # Open Graph metadata
@@ -22,7 +23,7 @@ head:
         url: https://longer008.github.io/
         # Page cover (og:image) (optional) Default to the Open Graph image or thumbnail of the page
         # You should leave this blank for most of the time
-        image: https://cdn.jsdelivr.net/gh/removeif/removeif.github.io@latest/img/avatar.jpg
+        image: https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0/img/avatar.jpg
         # Site name (og:site_name) (optional)
         # You should leave this blank for most of the time
         site_name: Walter`s Blog
@@ -61,7 +62,7 @@ head:
         author: walter
         # Page images (optional) Default to the Open Graph image or thumbnail of the page
         # You should leave this blank for most of the time
-        image: https://cdn.jsdelivr.net/gh/removeif/removeif.github.io@latest/img/avatar.jpg
+        image: https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0/img/avatar.jpg
     # Additional HTML meta tags in an array
     meta:
         # Meta tag specified in <attribute>=<value> style
@@ -188,7 +189,7 @@ widgets:
         # Author's current location to be shown in the profile widget
         location: 阿尔及利亚
         # Path or URL to the avatar to be shown in the profile widget
-        avatar: https://cdn.jsdelivr.net/gh/removeif/removeif.github.io@latest/img/avatar.jpg
+        avatar: https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0/img/avatar.jpg
         # Whether show the rounded avatar image
         avatar_rounded: true
         # Email address for the Gravatar
