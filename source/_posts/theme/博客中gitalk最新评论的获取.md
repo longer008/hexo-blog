@@ -142,7 +142,7 @@ int per_page = commentsNumber-1;//commentsNumber:评论数
 ```
 #### 方法1：请求接口地址示例
 ```java
-https://api.github.com/repos/removeif/blog_comment/issues?per_page=100&sort=comments
+https://api.github.com/repos/longer008/blog_comment/issues?per_page=100&sort=comments
 ```
 **返回结果**
 ```json

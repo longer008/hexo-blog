@@ -323,7 +323,7 @@ comment:
     # Disqus shortname
 #    shortname: ''
     owner: longer008         # (required) GitHub user name
-    repo: hexo-blog          # (required) GitHub repository name
+    repo: longer008.github.io          # (required) GitHub repository name
     client_id: e89664e367cd250daa70     # (required) OAuth application client id
     client_secret: 5301cd226ff11c2b7f2ab94de72fc93ee5b7ffba # (required) OAuth application client secret
     admin: ['longer008']

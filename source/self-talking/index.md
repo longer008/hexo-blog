@@ -13,7 +13,7 @@ tips：github登录后按时间正序查看、可点赞加❤️</div>
         clientID: 'e89664e367cd250daa70',
         clientSecret: '5301cd226ff11c2b7f2ab94de72fc93ee5b7ffba',
         id: '666666',
-        repo: 'hexo-blog',
+        repo: 'longer008.github.io',
         owner: 'longer008', 
         admin: "longer008",
         createIssueManually: true,
