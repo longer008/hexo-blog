@@ -1,6 +1,9 @@
 git add --all
 git commit  -m 'update'
 git push origin dev
+
+git subtree split -P public -b master
+
 echo -e "\ngit commit successful!"
 exit 0
 
