@@ -8,6 +8,8 @@ cd public
 
 git init 
 git remote add deploy https://github.com/longer008/longer008.github.io.git 
+git add --all
+git commit -m "create"
 git push deploy master -f
 
 
