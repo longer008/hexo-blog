@@ -2,7 +2,7 @@
 version: 3.0.0
 # Path or URL to the website's logo
 # https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0/img/avatar.jpg
-logo: https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0/img/avatar.jpg #https://cdn.jsdelivr.net/gh/removeif/blog_image/img/2019/20191121115040.png
+logo: https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0/img/avatar.jpg #https://cdn.jsdelivr.net/gh/longer008/blog_image/img/2019/20191121115040.png
 # Page metadata configurations
 head:
     # URL or path to the website's icon
@@ -130,12 +130,12 @@ donate:
         # Donation entry name
         type: alipay
         # Qrcode image URL
-        qrcode: 'https://raw.githubusercontent.com/removeif/blog_image/master/img/2019/20190802135456.png'
+        qrcode: 'https://raw.githubusercontent.com/longer008/blog_image/master/img/2019/20190802135456.png'
     -
         # Donation entry name
         type: wechat
         # Qrcode image URL
-        qrcode: 'https://raw.githubusercontent.com/removeif/blog_image/master/img/2019/20190802135550.png'
+        qrcode: 'https://raw.githubusercontent.com/longer008/blog_image/master/img/2019/20190802135550.png'
 #    -
 #    -
 #        type: patreon
@@ -200,16 +200,13 @@ widgets:
         social_links:
             Github:
                 icon: fab fa-github
-                url: 'https://github.com/removeif'
+                url: 'https://github.com/longer008'
             Weibo:
                 icon: fab fa-weibo
                 url: 'https://weibo.com/u/3050419984'
             Email:
                 icon: fa fa-envelope
-                url: 'mailto:removeif@163.com'
-            Next:
-                icon: fab fa-dribbble
-                url: 'https://removeif.github.io/remove.io'
+                url: 'mailto:18209491517@163.com'
             RSS:
                 icon: fas fa-rss
                 url: /atom.xml
@@ -256,7 +253,7 @@ widgets:
         # Hint text under the email input
         description: 输入邮箱开始订阅，更博后邮件通知！
         # Feedburner ID
-        feedburner_id: removeifFeedsId
+        feedburner_id: longer008FeedsId
     # Google AdSense unit configurations
 #    -
 #        # Where should the widget be placed, left sidebar or right sidebar
@@ -313,8 +310,8 @@ providers:
     fontcdn: google
     # Name or URL of the fontawesome icon font CDN provider
     iconcdn: fontawesome
-    # https://cdn.jsdelivr.net/gh/removeif/removeif.github.io@v1.0.6/json_data/record.json, cdn前缀，对于hexo new page 页面中引用的资源文件不生效，需要手动改，如friend友链页中引用的资源
-    my_cdn_pre: https://cdn.jsdelivr.net/gh/removeif/removeif.github.io@v2.2.1
+    # https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@v1.0.6/json_data/record.json, cdn前缀，对于hexo new page 页面中引用的资源文件不生效，需要手动改，如friend友链页中引用的资源
+    my_cdn_pre: https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@v2.2.1
 
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/

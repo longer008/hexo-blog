@@ -1,5 +1,5 @@
 // author by walter
-// https://removeif.github.io/
+// https://longer008.github.io/
 Storage.prototype.setExpire = (key, value, expire) => {
     let obj = {
         data: value,

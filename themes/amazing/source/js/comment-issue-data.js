@@ -1,6 +1,6 @@
-// 评论issues仓库 by.removeif https://removeif.github.io/
+// 评论issues仓库 by.longer008 https://longer008.github.io/
 var repoIssuesUrl = "https://api.github.com/repos/longer008/comment/issues";
-// 对应仓库 clientId、clientSecret 关于这两个参数的安全问题，查看 https://removeif.github.io/2019/09/19/博客源码分享.html#1-热门推荐，最新评论：
+// 对应仓库 clientId、clientSecret 关于这两个参数的安全问题，查看 https://longer008.github.io/2019/09/19/博客源码分享.html#1-热门推荐，最新评论：
 var clientId = "e89664e367cd250daa70";
 var clientSecret = "5301cd226ff11c2b7f2ab94de72fc93ee5b7ffba";
 var authorizationToken = 'Basic ' + btoa(clientId + ':' + clientSecret);
@@ -10,7 +10,7 @@ var reqCommentCountUrl = repoIssuesUrl + "?t=" + new Date().getTime() + "&labels
 var COMMENT_CACHE_KEY = "commentKey";
 
 // 管理员名称,评论时添加 [博主] 后缀
-var ADMIN_NAME = "removeif";
+var ADMIN_NAME = "longer008";
 
 function ajaxReqForGitHub(url,call) {
     $.ajax({
@@ -243,7 +243,7 @@ $(document).ready(setTimeout(function () { // 延迟1s执行，保证其余的�
         console.clear();
         console.log("~~~~xiu xiu xiu 欢迎光临~~~");
         console.log("~~~~唉，控制台太多报错了，呜呜呜呜~~~");
-        console.log("~~~~记得有时间多来看看哦，https://removeif.github.io/")
+        console.log("~~~~记得有时间多来看看哦，https://longer008.github.io/")
     }
     ,
     500

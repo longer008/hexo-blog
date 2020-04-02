@@ -1,5 +1,5 @@
 // author by walter
-// https://removeif.github.io/
+// https://longer008.github.io/
 $(function () { // 获取一句诗
     $.post("https://api.gushi.ci/all.json", {}, function (data, status) {
         var htmlC = "<blockquote>" + data.origin + "<br>\"" + data.content + "\"<br>–" + data.author + "</blockquote>";

@@ -1,5 +1,5 @@
 // author by walter
-// https://removeif.github.io/
+// https://longer008.github.io/
 $(function () { //获取处理友链数据
     $.getJSON("../json_data/friend.json", function (data) {
 

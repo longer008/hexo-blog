@@ -7,7 +7,7 @@
   },
   "description": "A simple, delicate, and modern theme for Hexo",
   "repository": "https://github.com/ppoffice/hexo-theme-amazing.git",
-  "author": "removeif <removeif@163.com>",
+  "author": "walter",
   "license": "MIT",
   "scripts": {
     "lint": "eslint --ext .js --ext .jsx --ext .json .",

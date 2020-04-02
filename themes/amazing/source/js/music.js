@@ -1,5 +1,5 @@
 // author by walter
-// https://removeif.github.io/
+// https://longer008.github.io/
 // 音乐处理
 var lastIndex;
 var musicJsons;
