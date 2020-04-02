@@ -1,6 +1,6 @@
 // 评论issues仓库 by.longer008 https://longer008.github.io/
 var repoIssuesUrl = "https://api.github.com/repos/longer008/comment/issues";
-// 对应仓库 clientId、clientSecret 关于这两个参数的安全问题，查看 https://longer008.github.io/2019/09/19/博客源码分享.html#1-热门推荐，最新评论：
+// 对应仓库 clientId、clientSecret：
 var clientId = "e89664e367cd250daa70";
 var clientSecret = "5301cd226ff11c2b7f2ab94de72fc93ee5b7ffba";
 var authorizationToken = 'Basic ' + btoa(clientId + ':' + clientSecret);

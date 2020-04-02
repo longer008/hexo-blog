@@ -7,7 +7,7 @@ cp -r public/* ../longer008.github.io/
 cd  ../longer008.github.io/
 git add --all 
 git commit  -m 'update'
-git push  origin master
+git push origin master
 
 echo -e "\ndeploy successful!"
 
