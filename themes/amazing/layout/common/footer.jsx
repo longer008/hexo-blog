@@ -20,9 +20,9 @@ class Footer extends Component {
             <div class="container">
                 <div class="level">
                     <div class="level-start">
-                        <a class="footer-logo is-block mb-2" href={siteUrl}>
+                        {/* <a class="footer-logo is-block mb-2" href={siteUrl}>
                             {logo && logo.text ? logo.text : <img src={logoUrl} alt={siteTitle} height="28" />}
-                        </a>
+                        </a> */}
                         {Object.keys(links).length ? <div class="field has-addons">
                             {Object.keys(links).map(name => {
                                 const link = links[name];
