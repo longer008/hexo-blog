@@ -35,7 +35,7 @@ class Footer extends Component {
                             {registeredNo ? <span>&copy; {registeredNo}<br /></span> : null}
                             {footerCopyrightDsec ? <span>&copy; 版权说明：[本网站所有内容均收集于互联网或自己创作,方便于网友与自己学习交流，如有侵权，请<a href={url_for('/message')} target="_blank">留言</a>，立即处理]<br /></span> : null}
                             {websiteStartTime ? <span>
-                                <script type="text/javascript" src={my_cdn(url_for('/js/statistics.js'))}></script>
+                                <script type="text/javascript" src={my_cdn(url_for('/js/statistics.min.js'))}></script>
                                 <script dangerouslySetInnerHTML={{ __html: `var now = new Date();setInterval("createTime('${websiteStartTime}')", 250,"");` }}></script>
                                 <span id="statistic-times">网站运行时间统计加载中...</span>
                                 <br />
