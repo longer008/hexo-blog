@@ -212,7 +212,7 @@ widgets:
                 icon: fas fa-rss
                 url: /atom.xml
     
-        hasHitokoto: true #左边一言开关，true-开，false-关       hasHitokoto 
+        has_hitokoto: true #左边一言开关，true-开，false-关   
 
     # Recommendation links widget configurations
     # Table of contents widget configurations
@@ -309,9 +309,10 @@ providers:
     # Name or URL template of the JavaScript and/or stylesheet CDN provider
     cdn: jsdelivr
     # Name or URL template of the webfont CDN provider
-    fontcdn: google
+    fontcdn: loli
     # Name or URL of the fontawesome icon font CDN provider
-    iconcdn: fontawesome
+    iconcdn: loli
+    
     # https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@v1.0/json_data/record.json, cdn前缀，对于hexo new page 页面中引用的资源文件不生效，需要手动改，如friend友链页中引用的资源
     my_cdn_pre: https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@v1.0.7
 
@@ -335,7 +336,7 @@ has_latest_modify_time: true #是否显示最后修改时间 true开启，false-
 
 has_copyright: true # 文中是否显示copyright true开启，false-关闭   
 
-website_start_time: 2020/04/01 00:00:00 #网站运行开始时间,不填不显示
+website_start_time: "2020/04/01 00:00:00" #网站运行开始时间,不填不显示
 
 footer_registered_no: 测试-川ICP备20200401号-1 #备案号
 

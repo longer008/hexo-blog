@@ -2,6 +2,7 @@ const moment = require('moment');
 const { Component, Fragment } = require('inferno');
 const Paginator = require('./misc/paginator');
 const ArticleMedia = require('./common/article-media');
+const AdsenseX = require('./widget/ads_x');
 
 module.exports = class extends Component {
     render() {
@@ -62,7 +63,13 @@ module.exports = class extends Component {
                 </div>;
         }
 
-        const js = `let myChart = echarts.init(document.getElementById('post-calendar'));
+        const echartJsUrl = my_cdn(url_for("/js/echarts.min.js"));
+        const js = `function loadEchart(){
+            if($("#post-calendar").length <= 0){
+                return;
+            }
+            $.getScript('${echartJsUrl}', function () { 
+            let myChart = echarts.init(document.getElementById('post-calendar'));
             let option = {
             title: {
                 top: 0,
@@ -130,7 +137,7 @@ module.exports = class extends Component {
             }]
 
         };
-        myChart.setOption(option);`;
+        myChart.setOption(option);})};loadEchart();`;
 
         let articleList;
         if (!page.year) {
@@ -163,6 +170,7 @@ module.exports = class extends Component {
                 urlFor={url_for}
                 prevTitle={__('common.prev')}
                 nextTitle={__('common.next')} /> : null}
+            <AdsenseX />
         </Fragment>;
     }
 };

@@ -19,6 +19,21 @@
 
 **增加adsense分支，此分支信息流中加入adsense广告，如[本博客](https://removeif.github.io/)adsense每个地方的使用方式，具体请移步[branch](https://github.com/removeif/hexo-theme-amazing/tree/adsense)**
 
+
+**adsense分支配置**  
+
+需要更改文件/themes/amazing/layout/widget/ads_x.jsx中的以下两个值，为自己在adsense中申请的页内广告的对应的值。
+```text
+data-ad-client="ca-pub-6343805421927634"
+data-ad-slot="5134765588"
+```
+然后主题_config.yml中配置显示的广告的位数
+```text
+index_adsense_positions: 0, #首页adsense放置广告的位置,尽量少配置些，多了有可能不显示。一位的时候，加个逗号，如1,或者1,5,9
+```
+可实现的效果，在首页，归档页，分类页，标签页，每篇文章末尾自动加上此adsense广告模块，详情效果可参考[博客](https://removeif.github.io/about/)
+
+
 线上博客：[欢迎围观](https://removeif.github.io/)，[博客源码Live Demo](https://removeif.github.io/removeif-demo/)
 
 ### 一、icarus主题之上主要改动
@@ -312,7 +327,7 @@ has_copyright: true # 文中是否显示copyright true开启，false-关闭
 website_start_time: 2018/11/11 00:00:00 #网站运行开始时间,不填不显示
 footer_registered_no: 测试-川ICP备20001070号-1 #备案号
 footer_copyright_dsec: true #footer 版权说明 true-开 false-关
-has_live_2D_switch: on #live2D开关 true-开 false-关
+has_live_2D_switch: true #live2D开关 true-开 false-关
 side_music_netease_id: 2364053447 #侧边栏网易云歌单id
 use_pjax: false #是否开启pjax，false-不开启，true-开启，开启后局部更新网页信息，切换页面背景音乐不间断等特性
 ```
