@@ -1,4 +1,4 @@
-// author by walter
+// author by longer008
 // https://longer008.github.io/
 
 var isNight = localStorage.getExpire('night');

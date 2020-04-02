@@ -2,11 +2,11 @@
 version: 3.0.0
 # Path or URL to the website's logo
 # https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0/img/avatar.jpg
-logo: https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0/img/avatar.jpg #https://cdn.jsdelivr.net/gh/longer008/blog_image/img/2019/20191121115040.png
+logo: https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0.6/img/avatar.jpg #https://cdn.jsdelivr.net/gh/longer008/blog_image/img/2019/20191121115040.png
 # Page metadata configurations
 head:
     # URL or path to the website's icon
-    favicon: https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0/img/avatar.jpg
+    favicon: https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0.6/img/avatar.jpg
     # Canonical URL of the current page
     canonical_url:
     # Open Graph metadata
@@ -29,7 +29,7 @@ head:
         site_name: Walter`s Blog
         # Page author (article:author) (optional)
         # You should leave this blank for most of the time
-        author: walter
+        author: longer008
         # Page description (og:description) (optional)
         # You should leave this blank for most of the time
         description: 日常技术,资源分享
@@ -59,7 +59,7 @@ head:
         url: https://longer008.github.io/
         # Page author (article:author) (optional)
         # You should leave this blank for most of the time
-        author: walter
+        author: longer008
         # Page images (optional) Default to the Open Graph image or thumbnail of the page
         # You should leave this blank for most of the time
         image: https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0/img/avatar.jpg
@@ -183,19 +183,19 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: walter
+        author: longer008
         # Title of the author to be shown in the profile widget
         author_title: 尚未执佩剑，转眼即江湖
         # Author's current location to be shown in the profile widget
         location: 阿尔及利亚
         # Path or URL to the avatar to be shown in the profile widget
-        avatar: https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0/img/avatar.jpg
+        avatar: https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0.6/img/avatar.jpg
         # Whether show the rounded avatar image
         avatar_rounded: true
         # Email address for the Gravatar
         gravatar:
         # URL or path for the follow button
-        follow_link: 'https://weibo.com/u/3050419984'
+        follow_link: 'https://weibo.com/u/2741933253'
         # Links to be shown on the bottom of the profile widget
         social_links:
             Github:
@@ -203,7 +203,7 @@ widgets:
                 url: 'https://github.com/longer008'
             Weibo:
                 icon: fab fa-weibo
-                url: 'https://weibo.com/u/3050419984'
+                url: 'https://weibo.com/u/2741933253'
             Email:
                 icon: fa fa-envelope
                 url: 'mailto:18209491517@163.com'

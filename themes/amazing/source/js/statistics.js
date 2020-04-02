@@ -1,4 +1,4 @@
-// author by walter
+// author by longer008
 // https://longer008.github.io/
 function createtime() {
     var n = new Date("04/01/2020 00:00:00");

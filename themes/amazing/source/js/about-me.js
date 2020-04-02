@@ -1,4 +1,4 @@
-// author by walter
+// author by longer008
 // https://longer008.github.io/
 $(function () { // 获取一句诗
     $.post("https://api.gushi.ci/all.json", {}, function (data, status) {
