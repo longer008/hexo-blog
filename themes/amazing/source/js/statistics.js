@@ -1,7 +1,7 @@
 // author by longer008
 // https://longer008.github.io/
-function createtime() {
-    var n = new Date("04/01/2020 00:00:00");
+function createtime(time) {
+    var n = new Date(time);
     now.setTime(now.getTime() + 250),
         days = (now - n) / 1e3 / 60 / 60 / 24,
         dnum = Math.floor(days),
@@ -14,9 +14,5 @@ function createtime() {
         seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
         snum = Math.round(seconds),
     1 == String(snum).length && (snum = "0" + snum),
-        document.getElementById("statistic-times").innerHTML = "❤️本站自<span><strong> 2020.04.01</strong><span> 已运行 <strong>" + dnum + "</strong> 天 <strong>" + hnum + "</strong> 小时 <strong>" + mnum + "</strong> 分 <strong>" + snum + "</strong> 秒！❤️";
+        document.getElementById("statistic-times").innerHTML = "❤️本站自<span><strong> "+time.split(" ")[0].replace(/\//g,".")+"</strong><span> 已运行 <strong>" + dnum + "</strong> 天 <strong>" + hnum + "</strong> 小时 <strong>" + mnum + "</strong> 分 <strong>" + snum + "</strong> 秒！❤️";
 }
-
-var now = new Date;
-
-setInterval("createtime()", 250);
