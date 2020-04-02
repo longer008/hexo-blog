@@ -1,7 +1,7 @@
 // author by removef
 // https://removeif.github.io/
 function createtime() {
-    var n = new Date("11/11/2018 00:00:00");
+    var n = new Date("04/01/2020 00:00:00");
     now.setTime(now.getTime() + 250),
         days = (now - n) / 1e3 / 60 / 60 / 24,
         dnum = Math.floor(days),
