@@ -1,4 +1,4 @@
-// author by removef
+// author by walter
 // https://removeif.github.io/
 Storage.prototype.setExpire = (key, value, expire) => {
     let obj = {

@@ -1,4 +1,4 @@
-// author by removef
+// author by walter
 // https://removeif.github.io/
 // 音乐处理
 var lastIndex;

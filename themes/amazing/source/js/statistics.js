@@ -1,5 +1,5 @@
-// author by removef
-// https://removeif.github.io/
+// author by walter
+// https://longer008.github.io/
 function createtime() {
     var n = new Date("04/01/2020 00:00:00");
     now.setTime(now.getTime() + 250),
