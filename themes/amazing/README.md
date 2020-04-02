@@ -312,7 +312,7 @@ has_copyright: true # 文中是否显示copyright true开启，false-关闭
 website_start_time: 2018/11/11 00:00:00 #网站运行开始时间,不填不显示
 footer_registered_no: 测试-川ICP备20001070号-1 #备案号
 footer_copyright_dsec: true #footer 版权说明 true-开 false-关
-has_live_2D_switch: true #live2D开关 true-开 false-关
+has_live_2D_switch: on #live2D开关 true-开 false-关
 side_music_netease_id: 2364053447 #侧边栏网易云歌单id
 use_pjax: false #是否开启pjax，false-不开启，true-开启，开启后局部更新网页信息，切换页面背景音乐不间断等特性
 ```
