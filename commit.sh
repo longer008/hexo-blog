@@ -3,7 +3,7 @@
 sh deploy.sh  #先编译，然后上传
 
 # 将编译之后的文件复制到longer008.github.io/目录并上传到对应仓库
-cp -r public/* ../longer008.github.io/
+cp -r .deploy_git/* ../longer008.github.io/
 cd  ../longer008.github.io/
 git add --all 
 git commit  -m 'update'
