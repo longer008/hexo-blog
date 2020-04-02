@@ -9,3 +9,4 @@ public/
 *.ipr
 *.iws
 *.iml
+.travis.yml

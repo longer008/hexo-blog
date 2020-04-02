@@ -1,25 +1,7 @@
 # 将代码提交到hexo-blog并将编译生成的文件上传到longer008.github.io.git 
-git add --all 
-git commit  -m 'update'
-git push  origin master
+sh deploy.sh  #先编译，然后上传
 
-# git subtree split -P public -b master
-
-# cd public
-
-# git init 
-# git remote add deploy https://github.com/longer008/longer008.github.io.git 
-# git add --all
-# git commit -m "create"
-# git push deploy master -f
-
-
-echo -e "\ngit commit successful!"
-
-# deploy
-hexo clean
-hexo deploy
-
+# 将编译之后的文件复制到longer008.github.io/目录并上传到对应仓库
 cp -r public/* ../longer008.github.io/
 cd  ../longer008.github.io/
 git add --all 

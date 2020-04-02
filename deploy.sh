@@ -6,3 +6,6 @@ hexo clean && hexo deploy
 git add --all 
 git commit  -m 'update'
 git push  origin master
+echo -e "\ngit commit successful!"
+
+# 使用hexo-deployer-git插件的时候就不需要Travis CI了
