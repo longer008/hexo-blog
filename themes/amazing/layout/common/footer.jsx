@@ -30,10 +30,10 @@ class Footer extends Component {
                         <p class="size-small">
                             <span dangerouslySetInnerHTML={{ __html: `&copy; ${siteYear} ${author || siteTitle}` }}></span>
                             &nbsp;&nbsp;Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
-                                href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>,Modify by <a href="https://github.com/removeif" target="_blank">removeif</a>&nbsp;
+                                href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>,Modify by <a href="https://github.com/removeif" target="_blank">longer008</a>&nbsp;
                             <br />
                             {registeredNo ? <span>&copy; {registeredNo}<br /></span> : null}
-                            {footerCopyrightDsec ? <span>&copy; 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href={url_for('/message')} target="_blank">留言</a>，立即处理]<br /></span> : null}
+                            {footerCopyrightDsec ? <span>&copy; 版权说明：[本网站所有内容均收集于互联网或自己创作,方便于网友与自己学习交流，如有侵权，请<a href={url_for('/message')} target="_blank">留言</a>，立即处理]<br /></span> : null}
                             {websiteStartTime ? <span>
                                 <script type="text/javascript" src={my_cdn(url_for('/js/statistics.js'))}></script>
                                 <script dangerouslySetInnerHTML={{ __html: `var now = new Date();setInterval("createTime('${websiteStartTime}')", 250,"");` }}></script>
