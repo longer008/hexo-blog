@@ -1,3 +1,4 @@
+# 将代码提交到hexo-blog并将编译生成的文件上传到longer008.github.io.git 
 git add --all 
 git commit  -m 'update'
 git push  origin master

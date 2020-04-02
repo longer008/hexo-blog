@@ -103,7 +103,9 @@ theme: amazing
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/longer008/hexo-blog
+  branch: gh-pages
 
 feed:
   type: atom
