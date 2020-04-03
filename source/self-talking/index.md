@@ -13,7 +13,7 @@ tips：github登录后按时间正序查看、可点赞加❤️</div>
         clientID: clientId,
         clientSecret: clientSecret,
         id: '666666',
-        repo: 'longer008.github.io',
+        repo: 'issue_database',
         owner: 'longer008', 
         admin: "longer008",
         createIssueManually: true,

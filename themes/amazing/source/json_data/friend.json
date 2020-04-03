@@ -1,45 +1,45 @@
 [
   {
-    "date": "2019.09.09",
-    "src": "/img/avatar.jpg",
-    "name": "Walter",
-    "desc": "后端开发，技术分享。",
+    "date": "2020.04.03",
+    "src": "https://cdn.jsdelivr.net/gh/longer008/longer008.github.io/img/avatar.jpg",
+    "name": "longer008",
+    "desc": "技术，资料分享",
     "url": "https://longer008.github.io/"
   },
   {
-    "date": "2019.09.09",
-    "src1": "/img/avatar.jpg",
-    "name": "Walter",
-    "desc": "后端开发，技术分享。",
+    "date": "2020.04.03",
+    "src1": "https://cdn.jsdelivr.net/gh/longer008/longer008.github.io/img/avatar.jpg",
+    "name": "longer008",
+    "desc": "技术，资料分享",
     "url": "https://longer008.github.io/"
   },
   {
-    "date": "2019.09.09",
-    "src": "/img/avatar.jpg",
-    "name": "Walter",
-    "desc": "后端开发，技术分享。",
+    "date": "2020.04.03",
+    "src": "https://cdn.jsdelivr.net/gh/longer008/longer008.github.io/img/avatar.jpg",
+    "name": "longer008",
+    "desc": "技术，资料分享",
     "url": "https://longer008.github.io/"
   },
   {
-    "date": "2019.09.09",
-    "src": "/img/avatar.jpg",
-    "name": "Walter",
-    "desc": "后端开发，技术分享。",
+    "date": "2020.04.03",
+    "src": "https://cdn.jsdelivr.net/gh/longer008/longer008.github.io/img/avatar.jpg",
+    "name": "longer008",
+    "desc": "技术，资料分享",
     "url": "https://longer008.github.io/"
   },
   {
-    "date": "2019.09.09",
-    "src": "/img/avatar.jpg",
-    "name": "Walter",
-    "desc": "后端开发，技术分享。",
+    "date": "2020.04.03",
+    "src": "https://cdn.jsdelivr.net/gh/longer008/longer008.github.io/img/avatar.jpg",
+    "name": "longer008",
+    "desc": "技术，资料分享",
     "url": "https://longer008.github.io/"
   },
   {
-    "date": "2019.09.09",
+    "date": "2020.04.03",
     "stopTime": "2019.11.01",
-    "src": "/img/avatar.jpg",
-    "name": "Walter",
-    "desc": "后端开发，技术分享。",
+    "src": "https://cdn.jsdelivr.net/gh/longer008/longer008.github.io/img/avatar.jpg",
+    "name": "longer008",
+    "desc": "技术，资料分享",
     "url": "https://longer008.github.io/",
     "valid":0
   }
