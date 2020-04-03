@@ -13,7 +13,7 @@ head:
     open_graph:
         # Page title (og:title) (optional)
         # You should leave this blank for most of the time
-        title: Walter
+        title: 终极幻想家
         # Page type (og:type) (optional)
         # You should leave this blank for most of the time
         type: blog
@@ -25,7 +25,7 @@ head:
         image: https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0/img/avatar.jpg
         # Site name (og:site_name) (optional)
         # You should leave this blank for most of the time
-        site_name: Walter`s Blog
+        site_name: 终极幻想家
         # Page author (article:author) (optional)
         # You should leave this blank for most of the time
         author: longer008
@@ -49,7 +49,7 @@ head:
     structured_data:
         # Page title (optional)
         # You should leave this blank for most of the time
-        title: Walter
+        title: 终极幻想家
         # Page description (optional)
         # You should leave this blank for most of the time
         description: 日常技术,资源分享
@@ -184,9 +184,9 @@ widgets:
         # Author name
         author: longer008
         # Title of the author to be shown in the profile widget
-        author_title: 尚未执佩剑，转眼即江湖
+        author_title: 非淡泊无以明志，非宁静无以致远
         # Author's current location to be shown in the profile widget
-        location: 阿尔及利亚
+        location: 中华
         # Path or URL to the avatar to be shown in the profile widget
         avatar: https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0.6/img/avatar.jpg
         # Whether show the rounded avatar image
@@ -205,7 +205,7 @@ widgets:
                 url: 'https://weibo.com/u/2741933253'
             Email:
                 icon: fa fa-envelope
-                url: 'mailto:18209491517@163.com'
+                url: 'mailto:937723369@qq.com'
             RSS:
                 icon: fas fa-rss
                 url: /atom.xml
