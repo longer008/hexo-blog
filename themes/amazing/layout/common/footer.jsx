@@ -35,8 +35,8 @@ class Footer extends Component {
                             {registeredNo ? <span>&copy; {registeredNo}<br /></span> : null}
                             {footerCopyrightDsec ? <span>&copy; 版权说明：[本网站所有内容均收集于互联网或自己创作,如有侵权，请<a href={url_for('/message')} target="_blank">联系</a>]<br /></span> : null}
                             {websiteStartTime ? <span>
-                                <script type="text/javascript" src={my_cdn(url_for('/js/statistics.min.js'))}></script>
-                                {/* <script dangerouslySetInnerHTML={{ __html: `var now = new Date();setInterval("createTime('${websiteStartTime}')", 250,"");` }}></script> */}
+                                <script type="text/javascript" src={my_cdn(url_for('/js/statistics.js'))}></script>
+                                <script dangerouslySetInnerHTML={{ __html: `var now = new Date();setInterval("createTime('${websiteStartTime}')", 250,"");` }}></script>
                                 <span id="statistic-times">网站运行时间统计加载中...</span>
                                 <br />
                             </span> : null}
@@ -87,7 +87,7 @@ class Footer extends Component {
 module.exports = cacheComponent(Footer, 'common.footer', props => {
     const { config, helper } = props;
     const { url_for, _p, date, my_cdn } = helper;
-    const { logo, title, author, footer, plugins, side_music_netease_id, website_start_time, footer_copyright_dsec, footer_registered_no } = config;
+    const { logo, title, author, footer, plugins, side_music_netease_id, website_start_time, footer_copyright_dsec, footer_registered_no, busuanzi_only_count } = config;
 
     const links = {};
     if (footer && footer.links) {
@@ -114,7 +114,7 @@ module.exports = cacheComponent(Footer, 'common.footer', props => {
         author,
         links,
         side_music_netease_id,
-        showVisitorCounter: plugins && plugins.busuanzi === true,
+        showVisitorCounter: plugins && plugins.busuanzi === true && (busuanzi_only_count != undefined && !busuanzi_only_count),
         visitorCounterTitle: _p('plugin.visitor', '<span id="busuanzi_value_site_uv">0</span>')
     };
 });

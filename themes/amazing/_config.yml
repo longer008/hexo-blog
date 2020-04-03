@@ -1,7 +1,6 @@
 # Version of the configuration file
 version: 3.0.0
 # Path or URL to the website's logo
-# https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0/img/avatar.jpg
 logo: https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0.6/img/avatar.jpg #https://cdn.jsdelivr.net/gh/longer008/blog_image/img/2019/20191121115040.png
 # Page metadata configurations
 head:
@@ -306,14 +305,14 @@ plugins:
 providers:
     # Name or URL template of the JavaScript and/or stylesheet CDN provider
     # jsdelivr  loli
-    cdn: jsdelivr 
+    cdn: loli 
     # Name or URL template of the webfont CDN provider
     fontcdn: loli  #google
     # Name or URL of the fontawesome icon font CDN provider
     iconcdn: loli  #fontawesome
     
     # https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@v1.0/json_data/record.json, cdn前缀，对于hexo new page 页面中引用的资源文件不生效，需要手动改，如friend友链页中引用的资源
-    my_cdn_pre: https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@v1.0.8
+    my_cdn_pre: #https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@v1.0.8
 
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
