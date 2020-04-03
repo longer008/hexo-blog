@@ -96,7 +96,7 @@ module.exports = class extends Component {
                         {hasLatestTime && page.updated && page.updated > page.date ?
                             <p class="text-right">
                                 <time datetime={date_xml(page.updated)}>
-                                    <strong><em>&nbsp;本文最后修改于:&nbsp;{date(page.updated)}.</em></strong>
+                                    <strong><em>&nbsp;本文最后修改于:&nbsp;{date(page.updated)}</em></strong>
                                 </time>
                             </p> : null
                         }

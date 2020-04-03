@@ -1,6 +1,6 @@
 ---
 title: github Issue 作为博客微型数据库的应用
-toc: false
+toc: true
 recommend: 1
 top: 1
 keywords: categories-github issue
@@ -10,6 +10,7 @@ categories:
   - 工具教程
   - 主题工具
 abbrlink: e7fe3cc
+date: 2020-04-01 09:25:05
 ---
 ### 背景
 
