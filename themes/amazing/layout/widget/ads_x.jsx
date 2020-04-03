@@ -16,7 +16,7 @@ class AdSenseX extends Component {
                          style="display:block; text-align:center;"
                          data-ad-layout="in-article"
                          data-ad-format="fluid"
-                         data-ad-client="ca-pub-6343805421927634"
+                         data-ad-client="ca-pub-8741678871467016"
                          data-ad-slot="5134765588"></ins>
                     <script
                         dangerouslySetInnerHTML={{__html: '(adsbygoogle = window.adsbygoogle || []).push({});'}}></script>
