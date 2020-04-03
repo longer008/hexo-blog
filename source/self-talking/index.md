@@ -6,12 +6,12 @@ thumbnail: https://cdn.jsdelivr.net/gh/longer008/blog_image/img/2019/20191212124
 <div class = "text-center"><h1>碎碎念</h1></div><div class = "text-tips">
 
 tips：github登录后按时间正序查看、可点赞加❤️</div>
-<div id="comment-container1"></div>
-<script src="/js/gitalk_self.min.js"></script>
+<div id="comment-container1"><div class="text-tips">碎碎念加载中，请稍等...</div></div>
 <script>
+    $.getScript("/js/gitalk_self.min.js", function () {
     var gitalk = new Gitalk({
-        clientID: 'e89664e367cd250daa70',
-        clientSecret: '5301cd226ff11c2b7f2ab94de72fc93ee5b7ffba',
+        clientID: clientId,
+        clientSecret: clientSecret,
         id: '666666',
         repo: 'longer008.github.io',
         owner: 'longer008', 
@@ -20,4 +20,5 @@ tips：github登录后按时间正序查看、可点赞加❤️</div>
         distractionFreeMode: false
     })
     gitalk.render('comment-container1')
+    });
 </script>

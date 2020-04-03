@@ -32,7 +32,7 @@ thumbnail: http://wx1.sinaimg.cn/large/b5d1b710ly1g6s77l1eikj212w0gbn7r.jpg
 
 <div class="video-player">
     <div class="d-title">
-            <i class="fa fa-video-camera" ></i>&nbsp;&nbsp;看看视频
+            <i class="fa fa-video-camera"></i>&nbsp;&nbsp;看看视频
     </div>
     <br/>
     <p class="hits">点击以下条目开始播放视频,向下滑动查看更多</p>
