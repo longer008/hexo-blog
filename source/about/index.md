@@ -27,38 +27,25 @@ comments: false
 + 追求尽可能的简洁，清晰，易用。
 + 在Icarus主题之上进行了部分修改。
 
-***更新日志：***
---*2020.01.18：icarus3.0适配*
---*2019.11.17：增加深色主题开关*
---*2019.10.30：去图，精简卡片*
---*2019.10.22：改版部分显示，优化速度*
---*2019.10.16：文章列表加上评论数显示*
---*2019.10.13：改版评论*
---*2019.09.25：图片、资源接入CDN免费jsDelivr、文章加入置顶*
---*2019.09.19：开源[博客代码](https://github.com/removeif/hexo-theme-icarus-removeif)*
---*2019.09.19：修改布局，拉伸布局，更宽的展示*
---*2019.09.18：修改友链ui为一行三个，并适配移动端，暗黑模式文章增加评论链接，增加留言链接*
---*2019.09.14：增加[精简next主题](https://removeif.github.io/remove.io/)*
---*2019.09.14：利用中秋节放假，重做了首页的热门推荐、加个widget最新评论框、归档页加入文章贡献概览面板*
 
 <br>
 
 #### 本站推荐索引
 
 ---
-**博客主题相关**
+<!-- **博客主题相关**
 + [github Issue 作为博客微型数据库的应用](https://removeif.github.io/theme/github-Issue-作为博客微型数据库的应用.html)
 + [github page网站cdn优化加速](https://removeif.github.io/theme/github-page网站cdn优化加速.html)
 + [博客源码分享](https://removeif.github.io/theme/博客源码分享.html)
 + [博客换肤的一种实现方式思路](https://removeif.github.io/theme/博客换肤的一种实现方式思路.html)
 + [博客中gitalk最新评论的获取](https://removeif.github.io/theme/博客中gitalk最新评论的获取.html)
 + [博客图片上传picgo工具github图传使用](https://removeif.github.io/theme/博客图片上传picgo工具github图传使用.html)
-+ [安装、部分配置icarus主题中文版](https://removeif.github.io/theme/安装、部分配置icarus主题中文版.html)
++ [安装、部分配置icarus主题中文版](https://removeif.github.io/theme/安装、部分配置icarus主题中文版.html) -->
 
 
-**技术知识点**
+<!-- **技术知识点** -->
 
-<br>
+<!-- <br>
 
 **法律法规**
 + [法律法规数据库](http://search.chinalaw.gov.cn/search2.html)
@@ -69,17 +56,17 @@ comments: false
 + [中华人民共和国婚姻法](https://removeif.github.io/law/中华人民共和国婚姻法.html)
 + [中华人名共和国网络安全法](https://removeif.github.io/law/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%B3%95.html)  
 + [中华人民共和国劳动法](https://removeif.github.io/law/中华人民共和国劳动法.html)
-<br>
+<br> -->
 
-**其他**
+<!-- **其他** -->
 + [网易云音乐歌单分享](https://longer008.github.io/music)
 
 <br>
 
-#### 计划
+<!-- #### 计划
 **2020计划**
 
----
+--- -->
 
 #### 时间轴记录
 
