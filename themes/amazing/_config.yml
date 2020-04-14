@@ -128,12 +128,12 @@ donate:
         # Donation entry name
         type: alipay
         # Qrcode image URL
-        qrcode: 'https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0/img/avatar.jpg'
+        qrcode: 'https://cdn.jsdelivr.net/gh/longer008/images/donate/alipay.jpg'
     -
         # Donation entry name
         type: wechat
         # Qrcode image URL
-        qrcode: 'https://cdn.jsdelivr.net/gh/longer008/longer008.github.io@1.0/img/avatar.jpg'
+        qrcode: 'https://cdn.jsdelivr.net/gh/longer008/images/donate/weixin.png'
 #    -
 #    -
 #        type: patreon
