@@ -17,7 +17,7 @@ date: 2020-04-10 08:58:12
 ---
 
 
-**`SpringBoot`使用`RestTemplate`发送`POST`请求的参数有`application/json`和 `FormData`两种形式**：
+**SpringBoot**使用RestTemplate发送`POST`请求的参数有`application/json`和 `FormData`两种形式：
 
 1. 参数是` json`形式，直接使用阿里巴巴的json包 `com.alibaba.fastjson` ，代码如下：
 <!-- more -->
