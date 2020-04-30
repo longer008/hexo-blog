@@ -10,8 +10,8 @@ tips：github登录后按时间正序查看、可点赞加❤️</div>
 <script>
     $.getScript("/js/gitalk_self.min.js", function () {
     var gitalk = new Gitalk({
-        clientID: clientId,
-        clientSecret: clientSecret,
+        clientID: "e89664e367cd250daa70",
+        clientSecret: "5301cd226ff11c2b7f2ab94de72fc93ee5b7ffba",
         id: '666666',
         repo: 'issue_database',
         owner: 'longer008', 
