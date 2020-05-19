@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>RestTemplate 发送post请求</title>
+    <url>/posts/b28e6d36/</url>
+    <content><![CDATA[<p><strong>SpringBoot</strong>使用RestTemplate发送<code>POST</code>请求的参数有<code>application/json</code>和 <code>FormData</code>两种形式：</p>
+<ol>
+<li><p>参数是<code>json</code>形式，直接使用阿里巴巴的json包 <code>com.alibaba.fastjson</code> ，代码如下：</p>
+<a id="more"></a>
+
+ <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">url=<span class="string">'http://posturl'</span>;</span><br><span class="line">JSONObject postData = <span class="keyword">new</span> JSONObject();</span><br><span class="line">postData.put(<span class="string">"id"</span>, <span class="number">1</span>);</span><br><span class="line">JSONObject result = restTemplate.postForEntity(url, postData, JSONObject<span class="class">.<span class="keyword">class</span>).<span class="title">getBody</span>()</span>;</span><br><span class="line"><span class="keyword">return</span> result;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>参数是<code>formdata</code>形式则需要使用RestTemplate发送<code>multipart/form-data</code>格式的数据</p>
+</li>
+</ol>
+<ul>
+<li><p>对请求头进行设置</p>
+  <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String url = <span class="string">'http://posturl'</span>;</span><br><span class="line">MultiValueMap&lt;String, String&gt; map= <span class="keyword">new</span> LinkedMultiValueMap&lt;String, String&gt;();</span><br><span class="line">map.add(<span class="string">"id"</span>,<span class="string">"1"</span>);</span><br><span class="line">HttpHeaders headers = <span class="keyword">new</span> HttpHeaders();</span><br><span class="line">headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);</span><br><span class="line">HttpEntity&lt;MultiValueMap&lt;String, String&gt;&gt; request = <span class="keyword">new</span> HttpEntity&lt;MultiValueMap&lt;String, String&gt;&gt;(map, headers);</span><br><span class="line"><span class="keyword">return</span> restTemplate.postForEntity(url, request,String<span class="class">.<span class="keyword">class</span>)</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>不设置请求头</p>
+  <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String url = <span class="string">'http://posturl'</span>;</span><br><span class="line">MultiValueMap&lt;String, String&gt; map= <span class="keyword">new</span> LinkedMultiValueMap&lt;String, String&gt;();</span><br><span class="line">map.add(<span class="string">"id"</span>,<span class="string">"1"</span>);</span><br><span class="line"><span class="keyword">return</span> restTemplate.postForEntity(url, map,String<span class="class">.<span class="keyword">class</span>)</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>开发教程</category>
+        <category>SpringBoot</category>
+      </categories>
+      <tags>
+        <tag>开发教程</tag>
+        <tag>SpringBoot</tag>
+        <tag>RestTemplate</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>github Issue 作为博客微型数据库的应用</title>
+    <url>/posts/e7fe3cc/</url>
+    <content><![CDATA[<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>众所周知，对于hexo框架搭建的静态博客，难免会产生一些动态的数据，比如一些碎碎念、友链、音乐、时间轴等微型数据。目前一般的做法:</p>
+<p>a.是创建一个json数据，来存储这些微型数据，但是如果数据太多的话，一是比较慢，二是有个硬伤问题，就是json数据不能分页请求，只能一次拿完，太多的话网络带宽占用太多。</p>
+<a id="more"></a>
+
+<p>b.或者有的直接后台写一些接口服务啥的，还得在买个服务器部署上去，然后博客中访问接口。</p>
+<p>c.或者有些可能就直接写到html中。</p>
+<p>对于a、c方法都比较麻烦，每次更新了都要编译部署，不能很方便的动态更新。对于b的话，成本以及技术要求可能就更多一些了。</p>
+<p>基于上面出现的问题，目前想到的一个解决方案就是，利用github 的issue作为一个微型数据库。能够很方便的动态更新，也能分页，也不需要啥json文件，想想都很方便。</p>
+<h3 id="issue数据库使用步骤"><a href="#issue数据库使用步骤" class="headerlink" title="issue数据库使用步骤"></a>issue数据库使用步骤</h3><h4 id="issue的创建"><a href="#issue的创建" class="headerlink" title="issue的创建"></a>issue的创建</h4><p>先创建一个Repository，对于此Repository可以专门作为微型的数据库，取名issue_database。创建好之后建立一些issue</p>
+<p>如下所示</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/removeif/blog_image/img/2019/20191128213154.png" alt=""></p>
+<p>目前博客中，所有的动态数据都放到issue中了。</p>
+<h4 id="issue中存储数据"><a href="#issue中存储数据" class="headerlink" title="issue中存储数据"></a>issue中存储数据</h4><p>对于创建好的issue，就可以往里面写数据了，比如我的友链数据为issue：blog_friends</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/removeif/blog_image/img/2019/20191128213427.png" alt=""></p>
+<p>对于issue中存储的数据最好存json格式的，因为可以方便后面取出来使用。存储好数据后，如果太多的话，可以点击hide,隐藏起来。同时这个issue最好给<code>Lock conversation</code>这样的好处是，防止别人往里面加些脏数据，只能自己往里写数据。哈哈，一般也没有闲的无聊的网友恶作剧。这样就存储好数据了。</p>
+<h4 id="博客中获取issue数据"><a href="#博客中获取issue数据" class="headerlink" title="博客中获取issue数据"></a>博客中获取issue数据</h4><p>博客中通过js获取issue中的数据，以博客友链为例，以下是获取代码，以及处理</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// author by walter</span></span><br><span class="line"><span class="comment">// https://removeif.github.io/</span></span><br><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="comment">//获取处理友链数据，来自issue，一次取完</span></span><br><span class="line">    $.getJSON(<span class="string">"https://api.github.com/repos/removeif/issue_database/issues/2/comments?per_page=100&amp;client_id=46a9f3481b46ea0129d8&amp;client_secret=79c7c9cb847e141757d7864453bcbf89f0655b24"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">source</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> data = [];</span><br><span class="line">        <span class="keyword">var</span> source1;</span><br><span class="line">        source1 = source;</span><br><span class="line">      	<span class="comment">// 以后每次更新的都在后面，此处倒序，按时间降序排</span></span><br><span class="line">        source1.reverse();</span><br><span class="line">      	<span class="comment">// 把所有的数据放到data的列表中</span></span><br><span class="line">        $.each(source1, <span class="function"><span class="keyword">function</span> (<span class="params">i, e</span>) </span>&#123;</span><br><span class="line">            data.push(...JSON.parse(e.body));</span><br><span class="line">        &#125;);</span><br><span class="line">      </span><br><span class="line">        $.each(data, <span class="function"><span class="keyword">function</span> (<span class="params">i, e</span>) </span>&#123;</span><br><span class="line">          <span class="comment">// 博客中html文件的构建，渲染</span></span><br><span class="line">   			 &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>上面代码中client_id、client_secret在另一篇文章中<strong><a href="https://removeif.github.io/2019/09/19/%E5%8D%9A%E5%AE%A2%E6%BA%90%E7%A0%81%E5%88%86%E4%BA%AB.html" target="_blank" rel="noopener">博客源码分享</a></strong>有详细的说明,可以查看一下。这样就能获取到相应的数据，进行操作。</p>
+<h4 id="issue数据的更新"><a href="#issue数据的更新" class="headerlink" title="issue数据的更新"></a>issue数据的更新</h4><p>比如想更新任意一项数据都可以进github中对应的仓库的issue下进行更新，添加。然后实时去博客中查看。</p>
+<h3 id="扩展一下"><a href="#扩展一下" class="headerlink" title="扩展一下"></a>扩展一下</h3><p>对于有些爱唠叨的人（比如我），弄个类似碎碎念的东西就比较实用了。之前想过各种方案，存json数据太不方便；后台写个服务部署服务器也太麻烦。最后思来想去还是利用了下现成的优秀项目<a href="https://github.com/gitalk/gitalk" target="_blank" rel="noopener">gitalk</a>,稍稍改改就能很好使用。</p>
+<h4 id="博客中的碎碎念"><a href="#博客中的碎碎念" class="headerlink" title="博客中的碎碎念"></a>博客中的碎碎念</h4><p>对于博主而言，有发表框和修改的操作，能够方便发表和修改。</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/removeif/blog_image/img/2019/20191128215148.png" alt=""></p>
+<p>可能有时候还会发表一些图片，对图片的样式做了一些控制</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/removeif/blog_image/img/2019/20191128215345.png" alt=""></p>
+<p>对于网友的话只能查看以及点赞加❤️</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/removeif/blog_image/img/2019/20191128215555.png" alt=""></p>
+<p>做法就是源码中改下返回html的文件内容，如果是管理员和非管理员返回一些不同的元素，能够很好的实现碎碎念的功能。<br>查看<a href="https://removeif.github.io/self-talking/" target="_blank" rel="noopener">碎碎念</a>。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>静态博客的动态数据是个痛点，GitHub Issue有很多可利用的地方。多去探索发掘其中的奥妙。</p>
+<p>利用GitHub Issue来解决目前也是一种解决方法。希望后面会出现更好的解决方案。</p>
+]]></content>
+      <categories>
+        <category>工具教程</category>
+        <category>主题工具</category>
+      </categories>
+      <tags>
+        <tag>工具教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Beyond Compare 4-文件对比工具</title>
+    <url>/posts/ff86c3c7/</url>
+    <content><![CDATA[<h3 id="安装和激活"><a href="#安装和激活" class="headerlink" title="安装和激活"></a>安装和激活</h3><p><strong>2020.4.3号测试此密钥在4.1.6版本仍可正常激活[<a href="https://www.lanzous.com/iay9bpe" target="_blank" rel="noopener">下载地址</a>]</strong>。<br><strong>4.3版本经测试提示密钥被吊销，不能使用。</strong><br>完整内容请点击<code>阅读更多</code></p>
+<a id="more"></a>
+<h3 id="beyond-compare4-密钥"><a href="#beyond-compare4-密钥" class="headerlink" title="beyond compare4 密钥"></a>beyond compare4 密钥</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">w4G-in5u3SH75RoB3VZIX8htiZgw4ELilwvPcHAIQWfwfXv5n0IHDp5hv</span><br><span class="line">1BM3+H1XygMtiE0-JBgacjE9tz33sIh542EmsGs1yg638UxVfmWqNLqu-</span><br><span class="line">Zw91XxNEiZF7DC7-iV1XbSfsgxI8Tvqr-ZMTxlGCJU+2YLveAc-YXs8ci</span><br><span class="line">RTtssts7leEbJ979H5v+G0sw-FwP9bjvE4GCJ8oj+jtlp7wFmpVdzovEh</span><br><span class="line">v5Vg3dMqhqTiQHKfmHjYbb0o5OUxq0jOWxg5NKim9dhCVF+avO6mDeRNc</span><br><span class="line">OYpl7BatIcd6tsiwdhHKRnyGshyVEjSgRCRY11IgyvdRPnbW8UOVULuTE</span><br></pre></td></tr></table></figure>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul>
+<li>如果点击帮助-输入密钥跳到购买网址或秘钥Beyond Compare 4输入框闪退问题：<br><code>删除安装目录下的BCUnrar.dll，然后就可以在 帮助-输入秘钥弹出秘钥框</code></li>
+<li>永久使用需删除<code>C:\Users\user\AppData\Roaming\Scooter Software\Beyond Compare 4</code>目录。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具教程</category>
+        <category>软件工具</category>
+      </categories>
+      <tags>
+        <tag>工具教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>全网VIP视频免费看（电脑端and移动端）</title>
+    <url>/posts/f7c57280/</url>
+    <content><![CDATA[<h2 id="条件设施"><a href="#条件设施" class="headerlink" title="条件设施"></a>条件设施</h2><p>硬件需求：一台电脑（手机也可以，请看后文）。</p>
+<p>软件需求：一个可以安装扩展的<strong>浏览器</strong>（不是客户端）。Chrome，Microsoft Edge，Safari，Opera Next，Firefox都可以，我用的是Chrome浏览器。</p>
+<p>需要安装Chrome浏览器的可以点下面链接下载安装</p>
+<p><a href="https://www.google.cn/chrome/" target="_blank" rel="noopener">https://www.google.cn/chrome/</a></p>
+<a id="more"></a>
+<h2 id="电脑端"><a href="#电脑端" class="headerlink" title="电脑端"></a>电脑端</h2><h3 id="安装Tampermonkey（油猴）"><a href="#安装Tampermonkey（油猴）" class="headerlink" title="安装Tampermonkey（油猴）"></a>安装Tampermonkey（油猴）</h3><p>介绍：一个用户脚本管理器</p>
+<h4 id="对于有条件的同学"><a href="#对于有条件的同学" class="headerlink" title="对于有条件的同学"></a>对于有条件的同学</h4><p>可以直接前往<a href="https://chrome.google.com/webstore/category/extensions" target="_blank" rel="noopener">Chrome网上应用店</a>下载</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/longer008/images@1.0/2020/vip/2020-04-12_11-09-01.png" alt="2020-04-12_11-09-01"></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/longer008/images@1.0/2020/vip/2020-04-12_11-11-01.png" alt="2020-04-12_11-11-01"></p>
+<p>点添加至Chrome即可。</p>
+<h4 id="对于没条件的同学"><a href="#对于没条件的同学" class="headerlink" title="对于没条件的同学"></a>对于没条件的同学</h4><p>对于没条件的同学（打不开上面链接）也不用担心，我已经准备好了，有两种方法安装（建议使用第<strong>2</strong>种）</p>
+<ol>
+<li>crx格式安装</li>
+</ol>
+<p>复制 <strong><a href="https://lanzous.com/ib97oxe" target="_blank" rel="noopener">https://lanzous.com/ib97oxe</a></strong> 下载即可</p>
+<p>然后打开Chrome浏览器，点击 “<strong>X</strong>”（关闭）按钮下面的<strong>三个点</strong>，找到“<strong>更多工具</strong>–&gt;<strong>扩展程序</strong>”并打开。</p>
+<p>然后<strong>右上方</strong>点击切换按钮打开“<strong>开发者模式</strong>”，会出现以下内容</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/longer008/images@1.0/2020/vip/%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F.png" alt="开发者模式"></p>
+<p>直接将下载的文件——“4.9_0.crx”拖入当前窗口即可</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/longer008/images@1.0/2020/vip/%E6%8B%96%E5%8A%A8.png" alt="img"></p>
+<p>如果报下面错误或其他错误</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/longer008/images@1.0/2020/vip/2020-04-12_11-45-11.png" alt="2020-04-12_11-45-11"></p>
+<p>请使用第二种方法</p>
+<ol start="2">
+<li>解压压缩包安装</li>
+</ol>
+<p><strong>打开链接：<a href="https://lanzous.com/ib9ucbi" target="_blank" rel="noopener">https://lanzous.com/ib9ucbi</a></strong></p>
+<p>下载完成后直接解压</p>
+<p><strong>注意：</strong></p>
+<ol>
+<li>别忘了解压到哪个目录哦，也不要随便放</li>
+<li>如果解压报错请更换解压工具（建议使用<strong>bandzip</strong>）</li>
+</ol>
+<p>然后在“<strong>开发者模式</strong>”中点击“<strong>加载已解压的扩展程序</strong>”，找到刚解压的目录，比如我解压到桌面了（不建议随便放）</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/longer008/images@1.0/2020/vip/2020-04-12_11-57-24.png" alt="2020-04-12_11-57-24"></p>
+<p>以上就完成了油猴扩展的安装，下面安装用户脚本。</p>
+<h3 id="安装用户脚本"><a href="#安装用户脚本" class="headerlink" title="安装用户脚本"></a>安装用户脚本</h3><p>献上很有名的用户脚本网站<a href="https://greasyfork.org/zh-CN" target="_blank" rel="noopener"><strong>Greasy Fork</strong></a>，在这个网站中我们可以找到很多好玩有趣的脚本。</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/longer008/images@1.0/2020/vip/2020-04-12_12-18-37.png" alt="2020-04-12_12-18-37"></p>
+<p>我就先点击“<strong>脚本列表了</strong>”，正好，第一个就是看视频的，那就安装它吧。</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/longer008/images@1.0/2020/vip/2020-04-12_12-21-26.png" alt="2020-04-12_12-21-26"></p>
+<p>点击标题链接进入详情页面</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/longer008/images@1.0/2020/vip/2020-04-12_12-25-29.png" alt="2020-04-12_12-25-29"></p>
+<p>如果之前没有安装过这个脚本的话直接点击“<strong>安装此脚本</strong>”即可，接下来会跳转到油猴脚本管理器界面，点击<strong>安装</strong>。</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/longer008/images@1.0/2020/vip/2020-04-12_12-27-12.png" alt="2020-04-12_12-27-12"></p>
+<h3 id="检查是否安装成功和是否启用"><a href="#检查是否安装成功和是否启用" class="headerlink" title="检查是否安装成功和是否启用"></a>检查是否安装成功和是否启用</h3><p>点击油猴插件图标，下图的<strong>标号1</strong>，标号2是我安装的另一个插件，不用管，点击<strong>标号3</strong>进入管理面板</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/longer008/images@1.0/2020/vip/2020-04-12_12-31-39.png" alt="2020-04-12_12-31-39"></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/longer008/images@1.0/2020/vip/2020-04-12_12-35-46.png" alt="2020-04-12_12-35-46"></p>
+<p>如果显示已启用就说明安装成功了，接下来我们测试一下，以xx视频为例，其他的一样：</p>
+<p>进入xx视频<strong>网页版</strong>，找一个VIP才能看的视频，我选了目前比较火的“<strong><a href="https://v.qq.com/x/cover/mzc00200q06w7zx/r0033bk1mxp.html" target="_blank" rel="noopener">龙岭迷窟</a></strong>”</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/longer008/images@1.0/2020/vip/2020-04-12_12-37-32.png" alt="2020-04-12_12-37-32"></p>
+<ol>
+<li>进来后发现第7集只能会员播放，于是选择第7集</li>
+<li>这时如果你没有登录或你不是会员的话会弹出一个框，直接关闭就行了</li>
+<li>最后点击最左边的红色的显示VIP字样小框。（此时你会发现油猴图标发生了变化）</li>
+</ol>
+<p><img data-src="https://cdn.jsdelivr.net/gh/longer008/images@1.0/2020/vip/2020-04-12_12-41-45.png" alt="2020-04-12_12-41-45"></p>
+<p>点击左侧<strong>VIP</strong>后会打开一个新的标签页，点击中间的三角按钮（播放键）即可播放</p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/longer008/images@1.0/2020/vip/2020-04-12_12-50-35.png" alt="2020-04-12_12-50-35"></p>
+<p>如果解析失败可以切换线路。</p>
+<h2 id="移动端"><a href="#移动端" class="headerlink" title="移动端"></a>移动端</h2><h3 id="目前移动端的Chrome浏览器还不支持安装扩展"><a href="#目前移动端的Chrome浏览器还不支持安装扩展" class="headerlink" title="目前移动端的Chrome浏览器还不支持安装扩展"></a>目前移动端的Chrome浏览器还不支持安装扩展</h3><p><img data-src="https://cdn.jsdelivr.net/gh/longer008/images@1.0/2020/vip/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200412131622.jpg" alt="微信图片_20200412131622"></p>
+<h3 id="Firefox浏览器安装扩展"><a href="#Firefox浏览器安装扩展" class="headerlink" title="Firefox浏览器安装扩展"></a>Firefox浏览器安装扩展</h3><ol>
+<li><p>还是点击首页右上角的三个点，然后点击<strong>附加组件</strong>–&gt;<strong>浏览Firefox推荐的扩展</strong>就可以看到各种组建了，选择自己喜欢的进行安装。如果找不到油猴插件请继续下面步骤（刚进去我没有找到油猴插件，后面摸索发现需要设置一下）</p>
+</li>
+<li><p>此时（Firefox推荐的扩展界面）继续点击那三个点，勾选“<strong>要求桌面版网站</strong>”(勾选完界面会刷新)，很重要!!!。此时界面应该是：</p>
+</li>
+</ol>
+<p><img data-src="https://cdn.jsdelivr.net/gh/longer008/images@1.0/2020/vip/%E5%8B%BE%E9%80%89%E5%AE%8C.jpg" alt="勾选完"></p>
+<ol start="3">
+<li>搜索油猴插件，我输入的是”tam”</li>
+</ol>
+<p><img data-src="https://cdn.jsdelivr.net/gh/longer008/images@1.0/2020/vip/%E6%90%9C%E7%B4%A2.jpg" alt="搜索"></p>
+<ol start="4">
+<li><p>进去后安装即可，安装油猴插件和用户脚本的步骤与电脑端一样，脚本还是<a href="https://greasyfork.org/zh-CN" target="_blank" rel="noopener">Greasy Fork</a>这个网站。安装完成后点三个点–&gt;附加组件可以查看我们安装的组件。</p>
+</li>
+<li><p>测试</p>
+</li>
+</ol>
+<p><img data-src="https://cdn.jsdelivr.net/gh/longer008/images@1.0/2020/vip/%E6%B5%8B%E8%AF%951.jpg" alt="测试1"></p>
+<ol start="6">
+<li>最后就是观看啦[/开心]</li>
+</ol>
+<p><img data-src="https://cdn.jsdelivr.net/gh/longer008/images@1.0/2020/vip/%E5%AE%8C%E6%88%90.jpg" alt="完成"></p>
+<p>​    有些同学反映Firefox安装的和我的不一样（IOS系统），建议在<strong>Google Play</strong>安装，其他可以安装扩展的移动端浏览器如<strong>Yandex</strong>，<strong>Kiwi Browser</strong> 都在可以在<strong>Google Play</strong>找到。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li><p>虽然这篇文章标题叫“手把手教你看全网VIP视频”，但看电影只用了一个小小的脚本，其他好玩的脚本还有很多，等着我们去探索。</p>
+</li>
+<li><p>在此感谢各位插件/脚本开发者，先膜拜一下。</p>
+</li>
+<li><p>我写这篇文章的目的是为了电脑小白也能看得懂，有的地方可能有些啰嗦，望大家见谅。如果有同学有不明白的地方可以找我。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具教程</category>
+        <category>视频</category>
+      </categories>
+      <tags>
+        <tag>工具教程</tag>
+      </tags>
+  </entry>
+</search>
