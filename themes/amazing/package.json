@@ -20,7 +20,7 @@
     "eslint-config-hexo": "^4.1.0",
     "eslint-plugin-json": "^2.0.1",
     "eslint-plugin-react": "^7.17.0",
-    "mocha": "^6.2.2"
+    "mocha": "^10.2.0"
   },
   "peerDependencies": {
     "ajv": "^6.10.2",
